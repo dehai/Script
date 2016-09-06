@@ -1,2 +1,3 @@
-# test-repository
-just for creating the reopsitory 
+# Just make note with shell commands
+ ** ls
+    
