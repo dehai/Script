@@ -1,0 +1,14 @@
+[[take-notes-some-useful-shell-commands]]
+take notes some useful shell commands
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1.cat
++
+---------------------
+cat << EOF > filename
+---------------------
+2.
++
+--------------
+
+--------------
