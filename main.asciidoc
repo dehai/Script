@@ -5,10 +5,16 @@ take notes some useful shell commands
 1.cat
 ---------------------
 cat << EOF > filename
+cat /dev/cdrom > image.iso
 ---------------------
 2.dd
 -----------------------------------------------
 dd if=/dev/zero of=junk.data bs=1M count=1
+dd if=/dev/cdrom of=image.iso
+mkisofs -V "Label" -o image.iso source_dir/
+isohybrid image.iso
+dd if=image.iso of=/dev/sdb1  OR cat image.iso > /dev/sdb1
+cdrecord -v /dev/cdrom image.iso
 -----------------------------------------------
 3.comm
 ---------------------------
@@ -18,3 +24,14 @@ comm A.txt B.txt [-1|-2|-3]
 ---------------------------
 sed 's/^$//g'
 --------------------------
+5.$
+---------
+$$,$?,$[0-N]
+--------
+6.sed
+---------
+sed -i -e 's///' path-to-file
+--------
+7.mount/umount
+----------------
+8,sync
