@@ -31,4 +31,73 @@ $$,$?,$[0-N]
 -------------------------
 6.mount/umount
 ----------------
-7,sync
+7.sync
+8.diff,patch
+----------------------------------
+diff -u file1 file2 > diff.patch
+patch -p1 file1 < diff.patch
+diff -Naur directory1 directory2
+----------------------------------
+9.head,tail
+--------------------------------
+head -n [+ | -]4
+tail -n [+ | -]4
+tail -f growing_file
+dmesg | tail -f
+PID=$(pidof geidt)
+tail -f file --pid $PID
+---------------------------------
+10.pushd,popd
+------------------------------------------
+#push the directory in the stack
+pushd dir1 ---> move to dir1
+pushd dir2 ---> move to dir2
+pushd dir3 ---> move to dir3
+
+#check stack command
+dirs
+dir3 dir2 dir1
+0    1    2
+#switch to directory that in the stack
+pushd +[0 | 1 | 2]
+
+#remove the directory that in the stack
+popd +[0 | 1 | 2]
+
+#switch in two directories
+cd -
+------------------------------------------
+11.wc
+------------------------------------------
+wc [−c|−m] [−lw] [file...]
+wc file -L
+------------------------------------------
+12.tree
+---------------------------------------------
+tree dir
+tree path -P PATTERN
+## tree /home -P "*.sh"
+
+tree path -I PATTERN
+tree -h
+tree path -H http://localhost -o out.html
+---------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
