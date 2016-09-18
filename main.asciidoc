@@ -26,12 +26,15 @@ sed 's/^$//g'
 sed -i -e 's///' path-to-file
 ------------------------------
 5.$
---------------------------
+-------------------------
 $$,$?,$[0-N]
 -------------------------
 6.mount/umount
-----------------
+-----
+-----
 7.sync
+----
+----
 8.diff,patch
 ----------------------------------
 diff -u file1 file2 > diff.patch
@@ -39,14 +42,14 @@ patch -p1 file1 < diff.patch
 diff -Naur directory1 directory2
 ----------------------------------
 9.head,tail
---------------------------------
+------------------
 head -n [+ | -]4
 tail -n [+ | -]4
 tail -f growing_file
 dmesg | tail -f
 PID=$(pidof geidt)
 tail -f file --pid $PID
----------------------------------
+------------------
 10.pushd,popd
 ------------------------------------------
 #push the directory in the stack
