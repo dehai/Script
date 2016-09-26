@@ -2,12 +2,12 @@
 take notes some useful shell commands
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1.cat
+.cat
 ---------------------
 cat << EOF > filename
 cat /dev/cdrom > image.iso
 ---------------------
-2.dd
+.dd
 -----------------------------------------------
 dd if=/dev/zero of=junk.data bs=1M count=1
 dd if=/dev/cdrom of=image.iso
@@ -16,16 +16,16 @@ isohybrid image.iso
 dd if=image.iso of=/dev/sdb1  OR cat image.iso > /dev/sdb1
 cdrecord -v /dev/cdrom image.iso
 -----------------------------------------------
-3.comm
+.comm
 ---------------------------
 comm A.txt B.txt [-1|-2|-3]
 ---------------------------
-4.sed
+.sed
 ------------------------------
 sed 's/^$//g'
 sed -i -e 's///' path-to-file
 ------------------------------
-5.$
+.$
 -------------------------
 # running pid
 $$
@@ -34,19 +34,19 @@ $?
 # arguments [0-N]
 $[0-N]
 -------------------------
-6.mount/umount
+.mount/umount
 -----
 -----
-7.sync
+.sync
 ----
 ----
-8.diff,patch
+.diff,patch
 ----------------------------------
 diff -u file1 file2 > diff.patch
 patch -p1 file1 < diff.patch
 diff -Naur directory1 directory2
 ----------------------------------
-9.head,tail
+.head,tail
 ------------------
 head -n [+ | -]4
 tail -n [+ | -]4
@@ -55,7 +55,7 @@ dmesg | tail -f
 PID=$(pidof geidt)
 tail -f file --pid $PID
 ------------------
-10.pushd,popd
+.pushd,popd
 ------------------------------------------
 #push the directory in the stack
 pushd dir1 ---> move to dir1
@@ -75,12 +75,12 @@ popd +[0 | 1 | 2]
 #switch in two directories
 cd -
 ------------------------------------------
-11.wc
+.wc
 ------------------------------------------
 wc [−c|−m] [−lw] [file...]
 wc file -L
 ------------------------------------------
-12.tree
+.tree
 ---------------------------------------------
 tree dir
 tree path -P PATTERN

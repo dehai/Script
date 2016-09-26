@@ -1,0 +1,67 @@
+[POSIX]
+* Regular style with POSIX
+[width="80%",cols="^2,^7,7",align="center",halign="center",valign="top",options="header"]
+|=====================================
+| Regular | Description | Example
+
+| [:alnum:] |字母与数字字符|
+\[[:alnum:]]+
+
+| [:alpha:] |字母字符(包括大写与小写字母)|
+\[[:alpha:]]\{4}
+
+| [:blank:] |空格与制表符|
+\[[:bland:]]*
+
+| [:digit:] |数字字符|
+\[[:digit:]]?
+
+| [:lower:] |小写字母|
+\[[:lower:]]\{5,}
+
+| [:upper:] |大写字母|
+\(\[[:upper:]]+)?
+
+| [:punct:] |标点符号|
+\[[:punct:]]
+
+| [:space:] |包含换行符、回车在内的所有空白字符|
+\[[:space:]]+
+|=====================================
+
+[Perl]
+* Regular style with Perl
+[width="80%",cols="^2,^7,7",align="center",halign="center",valign="top",options="header"]
+|=======================================
+| Regular | Description | Example
+
+| \b |单词边界|
+\bcool\b匹配cool,但不匹配coolant
+
+| \B |非单词边界|
+cool\B匹配coolant,但不匹配cool
+
+| \d |单个数字字符|
+b\db匹配b2b,但不匹配bcb
+
+| \D |单个非数字字符|
+b\Db匹配bcb,但不匹配b2b
+
+| \w |单个单词字符(字母、数字与_)|
+\w匹配1或a,但不匹配&
+
+| \W |单个非单词字符|
+\W匹配&,但不匹配1或a
+
+| \n |换行符|
+\n匹配一个新行
+
+| \s |单个空白字符|
+x\sx匹配x x,但不匹配xx
+
+| \S |单个非空白字符|
+x\Sx匹配xkx,但不匹配x x
+
+| \r |回车|
+\r匹配回车
+|=======================================
