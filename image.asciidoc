@@ -1,0 +1,3 @@
+NOTE:show the pictures
+---------------------
+Here are a image example: an image:images/smallnew.png[]
